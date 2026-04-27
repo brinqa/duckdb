@@ -309,7 +309,7 @@ static void WriteExtensionFiles(QueryContext &query_context, FileSystem &fs, con
 	if (!StringUtil::EndsWith(local_extension_path, ".duckdb_extension")) {
 		throw InternalException("Extension install local_extension_path of '%s' is not valid, should end in "
 		                        "'.duckdb_extension'",
-		                        temp_path);
+		                        local_extension_path);
 	}
 
 	// Write extension to tmp file
